@@ -99,7 +99,7 @@ async function getMentions( userId = process.env.TWITTER_USER_ID) {
 async function getUserId() {
   try {
     const username = 'arielGFalcon';
-    const user = await client.v2.userByUsername(username);
+    const user = await rClient.v2.userByUsername(username);
 
     return user.data.id;
   } catch (error) {
